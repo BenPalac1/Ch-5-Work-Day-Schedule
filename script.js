@@ -56,7 +56,20 @@ $(document).ready(function () {
     $('#hour-17 .description').val(localStorage.getItem('hour-17'));
 
     // displays current date in the header of the page.
-    $('#currentDay').text(dayjs().format('dddd, MMMM D, YYYY'));
+    // added code that displays a running current time clock to current date.
+    function updateCurrentTime() {
+        const currentTimeElement = document.getElementById('currentDay');
+        const now = dayjs();
+        currentTimeElement.textContent = now.format('dddd, MMMM D, YYYY, HH:mm:ss a');
+    }
+   
+    // Initial call to display the time
+    updateCurrentTime();
+
+    // Update the time every second (1000 milliseconds)
+    setInterval(updateCurrentTime, 1000);
+
+
 
 });
   
