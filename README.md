@@ -20,7 +20,7 @@ The code for the challenge can be found in the following file:
 - [style.css](style.css): Contains the CSS styles for the main page.
 
 ## Video showing apps functionailty
-![video of Schedul App](https://github.com/BenPalac1/Ch-5-Work-Day-Schedule/assets/139652929/069cf1be-0477-44ee-a455-bf0436e85f3e)
+![video of Schedul App]https://github.com/BenPalac1/Ch-5-Work-Day-Schedule/assets/139652929/069cf1be-0477-44ee-a455-bf0436e85f3e
 
 ## Link to Deployed
 
