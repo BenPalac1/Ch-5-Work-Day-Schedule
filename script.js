@@ -5,20 +5,15 @@ $(document).ready(function () {
         var value=$(this).siblings('.description').val();
         var time=$(this).parent().attr('id');
 
-        // saves user changes to localStorage.
         localStorage.setItem(time, value);
 
-        // displays green check mark when something is saved to localStorage.
         $('.notification').addClass('show');
 
-        // the checkmark is removed after 5 seconds.
         setTimeout(function () {
             $('.notification').removeClass('show');
         },5000);
     });
 
-    // adds past, present, or future class to each time
-    // block by comparing the id to the current hour. 
     function hourUpdater() {
         var currentHour=dayjs().hour();
 
@@ -40,11 +35,9 @@ $(document).ready(function () {
 
     hourUpdater();
 
-    // checks every 15 if current time needs to be updated.
+    // checks every 15seconds if current time needs to be updated.
     setInterval(hourUpdater, 15000);
 
-    // takes user input that was saved in localStorage and sets
-    // the values of the corresponding text area elements.
     $('#hour-9 .description').val(localStorage.getItem('hour-9'));
     $('#hour-10 .description').val(localStorage.getItem('hour-10'));
     $('#hour-11 .description').val(localStorage.getItem('hour-11'));
@@ -63,13 +56,9 @@ $(document).ready(function () {
         currentTimeElement.textContent = now.format('dddd, MMMM D, YYYY, HH:mm:ss a');
     }
    
-    // Initial call to display the time
     updateCurrentTime();
 
-    // Update the time every second (1000 milliseconds)
     setInterval(updateCurrentTime, 1000);
-
-
 
 });
   
