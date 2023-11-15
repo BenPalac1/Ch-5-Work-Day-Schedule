@@ -24,6 +24,7 @@ The code for the challenge can be found in the following file:
 
 ## Link to Deployed
 
+https://benpalac1.github.io/Ch-5-Work-Day-Schedule/
 
 ## Other Resources
 Styling used:
